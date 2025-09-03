@@ -3,6 +3,40 @@
 ## Overview
 This project is an AI-powered HR chatbot designed to help users query employee information, skills, projects, and availability. It combines a **FastAPI backend** for handling queries and a **Streamlit frontend** for a user-friendly interface. The system uses **LangChain**, **Ollama**, and **Groq** LLMs to provide retrieval-augmented generation (RAG) answers based on structured Excel data.
 
+## Project Structure
+
+### 1. `app_sql` Directory
+This directory contains the core files for building and running a Retrieval-Augmented Generation (RAG) system over an SQL database:
+
+- **`rag_sql.ipynb`**  
+  Jupyter Notebook for testing and running the RAG pipeline on the SQL database.
+
+- **`app.py`**  
+  Contains the backend implementation of the RAG model using **FastAPI**.
+
+- **`ui.py`**  
+  Streamlit-based web application that consumes the API from `app.py` for the frontend interface.
+
+---
+
+### 2. `faiss_index` Directory
+Stores the **vector database encodings** used by the RAG system for efficient similarity search.
+
+---
+
+### 3. `rag_excel.ipynb`
+Jupyter Notebook for testing and running the RAG pipeline on **Excel** data sources.
+
+---
+
+### 4. `ui.py` (Excel Version)
+Streamlit-based web application for the **RAG over Excel** model using:
+- **Ollama embeddings**
+- **FastAPI backend**
+- **Streamlit frontend**
+
+
+
 ## Features
 - Ask natural language questions about employees and projects.
 - Search employees by skill with live results.
