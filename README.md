@@ -69,5 +69,5 @@ Response:
   ]
 }
 
-![Chat Interface](screenshots/image.png)
+![Chat Interface](screenshot/image.png)
 
