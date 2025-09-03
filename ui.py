@@ -52,7 +52,7 @@ Think step by step before providing a detailed answer.
 </context>
 Question: {input}
 """)
-document_chain = create_stuff_documents_chain(llm=ollama_llm, prompt=prompt)
+document_chain = create_stuff_documents_chain(llm=chat_llm, prompt=prompt)
 retriever = vectorstore.as_retriever()
 retrieval_chain = create_retrieval_chain(retriever, document_chain)
 
